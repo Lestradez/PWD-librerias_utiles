@@ -41,7 +41,6 @@ require_once __DIR__.'/../../vendor/google/recaptcha/src/autoload.php';
                             // El reCAPTCHA se pasó con éxito, puedes continuar con la autenticación del usuario.
                             $verificacion = $objDatos->verificarPass($datos, $usuarios);
                             echo '<div class="alert alert-dark" role="alert">' . $verificacion . ' </div>';
-                            
                            
                         } else {
                             // El reCAPTCHA no se pasó, maneja el error adecuadamente.

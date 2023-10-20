@@ -3,9 +3,7 @@ include_once __DIR__."/../../includes/configuracion.php";
 include_once(STRUCTURE_PATH . "head.php");
 require_once __DIR__.'/../../vendor/google/recaptcha/src/autoload.php';
 
-
 define("CLAVE_SECRETA", "6LePBmAoAAAAAHfZWp_zV6lsM-orqkxsCbwPpDJv");
-
 ?>
 <main class="p-5 text-center bg-light">
   <div class="justify-content-md-center align-items-center ">
@@ -32,8 +30,6 @@ define("CLAVE_SECRETA", "6LePBmAoAAAAAHfZWp_zV6lsM-orqkxsCbwPpDJv");
             // El reCAPTCHA se pasó con éxito, verifica las credenciales del usuario
             $verificacion = $objDatos->verificarPass($datos, $usuarios);
             echo '<div class="alert alert-dark" role="alert">' . $verificacion . ' </div>';
-            echo json_encode($resp->toArray());
-           
           } else {
             // Maneja el error de reCAPTCHA si no se pasa
             $errors = $resp->getErrorCodes();
